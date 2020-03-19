@@ -10,9 +10,10 @@ alias ga='git add'
 alias gc='git commit -m'
 alias ginit='git init && git checkout -b main'
 gz() {
-    git add . && \
-    git commit -m "$1" \
-    && git push 
+    git add .
+    git commit -m "$1"
+    git pull
+    git push 
 }
 clone() {
     # performs "git clone" into correct location in URL directory structure
