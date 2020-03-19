@@ -14,6 +14,24 @@ gz() {
     git commit -m "$1" \
     && git push 
 }
+clone() {
+    # performs "git clone" into correct location in URL directory structure
+    # currently supports SSH, HTTP, and HTTPS URLs
+
+    TARGET_DIR=$1
+    # Remove http, s, ://, .git
+    TARGET_DIR=${TARGET_DIR#http}
+    TARGET_DIR=${TARGET_DIR#s}
+    TARGET_DIR=${TARGET_DIR#://}
+    TARGET_DIR=${TARGET_DIR%.git}
+    # Reformat SSH URL
+    TARGET_DIR=${TARGET_DIR#*@}
+    TARGET_DIR=${TARGET_DIR/://}
+    # git clone
+    TARGET_DIR="$HOME/Projects/$TARGET_DIR"  # edit this line to match your preferences
+    git clone $1 $TARGET_DIR
+    cd $TARGET_DIR
+}
 
 # file aliases
 alias lisa='ls -lisah'
