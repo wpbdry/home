@@ -39,6 +39,23 @@ alias lisa='ls -lisah'
 mkcd() {
     mkdir -p "$1" && cd "$1"
 }
+qcd() {
+    # quickly cd into any project in the URL directory structure
+    # expects param in format "project -- domain/user"
+    cd ~/Projects/${1#*$'\U2002--\U2002'}/${1%$'\U2002--\U2002'*}
+}
+_qcd_completions() {
+    # searches projects in ~/Projects/domain/user/project
+    # returns param in format "project -- domain/user"
+    for DOMAIN in $(ls ~/Projects); do
+        for USER in $(ls ~/Projects/$DOMAIN); do
+            for PROJECT in $(ls ~/Projects/$DOMAIN/$USER); do
+                COMPREPLY+=($PROJECT$'\U2002--\U2002'$DOMAIN/$USER)
+            done
+        done
+    done
+}
+complete -F _qcd_completions qcd
 
 # python
 alias py='python3'
