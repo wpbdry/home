@@ -1,0 +1,47 @@
+{
+    "editor.fontFamily": "'Dank Mono', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 1,
+    "diffEditor.renderSideBySide": false,
+    "go.formatTool": "goimports",
+    "explorer.confirmDragAndDrop": false,
+    "markdown-pdf.outputDirectory": "~/Desktop",
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          //Use cmd+shift+p > "Developer: Inspect Editor Tokens and Scopes" to find scopes
+          {
+            "scope": [
+              //following will be in italic
+              "comment",
+              "keyword", //import, export, return, if
+              "constant", //String, Number, Boolean
+              "storage", //class, const, let, extends
+              "variable.language", //super, this...
+              // "entity.name.tag", //html tags
+              "entity.other.attribute-name"
+            ],
+            "settings": {
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "scope": [
+              //following will be excluded from italics (VSCode has some defaults for italics)
+              // "invalid",
+              // "keyword.operator",
+              // "constant.numeric.css",
+              // "keyword.other.unit.px.css",
+              // "constant.numeric.decimal.js",
+              // "constant.numeric.json"
+            ],
+            "settings": {
+              "fontStyle": ""
+            }
+          }
+        ]
+      },
+      "javascript.updateImportsOnFileMove.enabled": "always"
+}
