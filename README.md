@@ -4,9 +4,9 @@ This repository contains my shell aliases.
 ## Setup
 ```shell
 cd ~
-git init
-git remote add origin https://wpbdry@github.com/wpbdry/shell-configuration
-git pull
+git init && git checkout -b main
+git remote add origin https://github.com/wpbdry/shell-configuration
+git pull origin main
 echo '\n. ~/.aliases.sh' >> .zshrc
 ```
 
