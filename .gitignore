@@ -1,0 +1,21 @@
+#
+# ~/.gitignore
+#
+
+# This is my home directory so I would like to ignore
+# everything except specific configuration files.
+*
+
+# #######################################
+# FILES I WANT TO TRACK
+# #######################################
+
+!.gitignore
+!README.md
+!.aliases.sh
+
+# #######################################
+# #######################################
+
+# Make sure to definitely ignore sesitive files
+.ssh/*
