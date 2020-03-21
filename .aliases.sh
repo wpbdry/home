@@ -34,7 +34,7 @@ clone() {
     cd $TARGET_DIR
 }
 
-# file aliases
+# file
 alias lisa='ls -lisah'
 mkcd() {
     mkdir -p "$1" && cd "$1"
@@ -56,6 +56,9 @@ _qcd_completions() {
     done
 }
 complete -F _qcd_completions qcd
+
+# text
+alias cat='bat'
 
 # python
 alias py='python3'
