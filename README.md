@@ -1,5 +1,5 @@
 # Shell configuration
-This repository contains my shell aliases.
+This repository contains configuration files that I share across devices.
 
 ## Setup
 ```shell

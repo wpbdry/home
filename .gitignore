@@ -10,9 +10,16 @@
 # FILES I WANT TO TRACK
 # #######################################
 
+# This repo
 !.gitignore
 !README.md
+
+# Shell
 !.aliases.sh
+
+# Git
+!.gitconfig
+!.gitignore_global
 
 # VS Code settings.json on MacOS
 !Library

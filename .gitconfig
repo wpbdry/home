@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file
+[user]
+	name = William Dry
+	email = wpbdry@gmail.com
+	signingkey = 89DB5F45AAD7120EBF61173B85689032D18B4E9E
+[core]
+	excludesfile = ~/.gitignore_global
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[credential]
+	helper = osxkeychain
+  	useHttpPath = false
