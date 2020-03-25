@@ -20,6 +20,8 @@
 # Git
 !.gitconfig
 !.gitignore_global
+!.gnupg
+!.gnupg/gpg-agent.conf
 
 # VS Code settings.json on MacOS
 !Library
@@ -31,5 +33,6 @@
 # #######################################
 # #######################################
 
-# Make sure to definitely ignore sesitive files
+# Make sure to definitely ignore sensitive files
 .ssh/*
+.gnupg/private-keys*
