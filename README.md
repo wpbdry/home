@@ -1,4 +1,4 @@
-# Shell configuration
+# $HOME
 This repository contains configuration files that I share across devices.
 
 ## Setup
