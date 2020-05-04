@@ -80,3 +80,4 @@ alias psql='/Library/PostgreSQL/12/bin/psql'
 # servers
 alias capetown='ssh wpbdry@capetown.phiture.com'
 alias toaster='ssh wpbdry@toaster.phiture.com'
+alias berlin='ssh wpbdry@berlin.phiture.com'
