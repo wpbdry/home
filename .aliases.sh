@@ -64,8 +64,9 @@ alias cat='bat'
 alias py='python3'
 alias pip='pip3'
 alias activate='source env/bin/activate'
-alias virtualenv='python3 -m virtualenv'
 alias freeze='pip freeze > requirements.txt'
+alias virtualenv='python3 -m virtualenv'
+alias jupyter='python3 -m jupyter'
 
 # go projects
 alias opinder='cd ~/go/src/github.com/wpbdry/opinder_backend'
