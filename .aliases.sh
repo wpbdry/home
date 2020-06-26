@@ -61,12 +61,25 @@ complete -F _qcd_completions qcd
 alias cat='bat'
 
 # python
+PY_DEPENDENCIES=requirements.txt
 alias py='python3'
-alias pip='pip3'
 alias activate='source env/bin/activate'
-alias freeze='pip freeze > requirements.txt'
+alias freeze="pip3 freeze > $PY_DEPENDENCIES"
 alias virtualenv='python3 -m virtualenv'
 alias jupyter='python3 -m jupyter'
+pip() {
+    # simulates npm's behaviour with 'install' or 'i' using requirements.txt to track dependencies
+    if [ "$1" = 'i'  ] || [ "$1" = 'install' ]; then
+        if [ -z "$2" ]; then
+            pip3 install -r "$PY_DEPENDENCIES"
+        else
+            pip3 install "${@:2}"
+            pip3 freeze > "$PY_DEPENDENCIES"
+        fi
+    else
+        pip3 "$@"
+    fi
+}
 
 # go projects
 alias opinder='cd ~/go/src/github.com/wpbdry/opinder_backend'
