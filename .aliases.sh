@@ -85,7 +85,8 @@ pip() {
 alias opinder='cd ~/go/src/github.com/wpbdry/opinder_backend'
 
 # docker
-alias up='docker-compose up -d'
+alias doc='docker-compose'
+alias up='docker-compose up'
 alias down='docker-compose down'
 
 # psql
