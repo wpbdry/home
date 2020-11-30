@@ -43,5 +43,11 @@
           }
         ]
       },
-      "javascript.updateImportsOnFileMove.enabled": "always"
+      "javascript.updateImportsOnFileMove.enabled": "always",
+      "workbench.editorAssociations": [
+        {
+          "viewType": "jupyter.notebook.ipynb",
+          "filenamePattern": "*.ipynb"
+        }
+      ]
 }
